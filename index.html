@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyLib - Tu Biblioteca de Python</title>
+    <title>PyLib - Tu Biblioteca de Programación</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -22,9 +22,9 @@
         }
 
         .glass-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.07);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
             border-color: #38bdf8;
         }
 
@@ -34,26 +34,26 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Ajuste de tamaño de portada: más pequeñas */
+        /* Tamaño de portada aumentado para mejor legibilidad visual */
         .book-cover {
-            height: 180px;
+            height: 260px;
             width: 100%;
             object-fit: cover;
             border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .category-badge {
             background: rgba(56, 189, 248, 0.15);
             color: #7dd3fc;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            padding: 2px 10px;
+            padding: 4px 12px;
             border-radius: 99px;
             font-weight: 600;
         }
 
-        /* Scrollbar estilizado */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -64,109 +64,81 @@
             background: #334155;
             border-radius: 10px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #475569;
-        }
     </style>
 </head>
 <body class="p-6 md:p-12">
 
-    <!-- Encabezado Compacto -->
-    <header class="max-w-5xl mx-auto text-center mb-10">
-        <h1 class="text-3xl md:text-5xl font-bold mb-3 gradient-text">Biblioteca digital de Programacion</h1>
-        <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
-            Python, Javascript y Conceptos basicos.
+    <!-- Encabezado -->
+    <header class="max-w-5xl mx-auto text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">Biblioteca Digital</h1>
+        <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
+            Recursos de Python, Javascript y Conceptos fundamentales para estudiantes de alto nivel.
         </p>
     </header>
 
-    <!-- Buscador Refinado -->
-    <div class="max-w-md mx-auto mb-10">
+    <!-- Buscador -->
+    <div class="max-w-xl mx-auto mb-14">
         <div class="relative group">
-            <input type="text" id="searchInput" placeholder="Buscar por título o nivel..." 
-                class="w-full bg-slate-800/50 border border-slate-700 rounded-xl py-2.5 px-5 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition text-sm">
+            <input type="text" id="searchInput" placeholder="¿Qué quieres aprender hoy? Busca título o autor..." 
+                class="w-full bg-slate-800/50 border border-slate-700 rounded-2xl py-4 px-6 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition text-base shadow-lg">
         </div>
     </div>
 
-    <!-- Rejilla de Libros Compacta -->
-    <!-- Se aumenta el número de columnas para reducir el ancho de cada tarjeta -->
-    <main class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5" id="bookGrid">
+    <!-- Rejilla de Libros - Ajustada para tamaños más grandes -->
+    <main class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="bookGrid">
         
         <!-- Libro 1 -->
-        <a href="https://drive.google.com/file/d/1yVBVKSb-bG4Sk-mPzLt00V4lr4GmcYHf/view?usp=sharing" target="_blank" class="glass-card rounded-2xl p-3 flex flex-col group">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxLsqSC13t4WkQLxJ4uzP811aalz7bHmYAg&s" alt="Python Básico" class="book-cover mb-3">
+        <a href="https://drive.google.com/file/d/1yVBVKSb-bG4Sk-mPzLt00V4lr4GmcYHf/view?usp=sharing" target="_blank" class="glass-card rounded-2xl p-4 flex flex-col group">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxLsqSC13t4WkQLxJ4uzP811aalz7bHmYAg&s" alt="Estructuras de datos" class="book-cover mb-4">
             <div class="flex-grow">
-                <div class="flex flex-wrap gap-1 mb-2">
+                <div class="mb-3">
                     <span class="category-badge">Xavier Sáez Pous</span>
                 </div>
-                <h3 class="text-sm font-bold mb-1 group-hover:text-sky-400 transition-colors">Estructuras de datos básicas</h3>
-                <p class="text-slate-500 text-[11px] leading-tight">Secuencias.</p>
+                <h3 class="text-lg font-bold mb-2 group-hover:text-sky-400 transition-colors leading-snug">Estructuras de datos básicas</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Secuencias y fundamentos esenciales para la programación estructurada.</p>
             </div>
         </a>
 
         <!-- Libro 2 -->
-        <a href="https://drive.google.com/your-link-here-2" target="_blank" class="glass-card rounded-2xl p-3 flex flex-col group">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=300&q=80" alt="Data Science" class="book-cover mb-3">
+        <a href="#" target="_blank" class="glass-card rounded-2xl p-4 flex flex-col group">
+            <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&w=500&q=80" alt="Javascript" class="book-cover mb-4">
             <div class="flex-grow">
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="category-badge">Uni</span>
+                <div class="mb-3">
+                    <span class="category-badge" style="background: rgba(234, 179, 8, 0.15); color: #fde047;">Javascript</span>
                 </div>
-                <h3 class="text-sm font-bold mb-1 group-hover:text-sky-400 transition-colors">Data Science</h3>
-                <p class="text-slate-500 text-[11px] leading-tight">Análisis con Pandas y NumPy.</p>
+                <h3 class="text-lg font-bold mb-2 group-hover:text-yellow-400 transition-colors leading-snug">JS Moderno ES6+</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Domina el desarrollo frontend con las últimas funciones de Javascript.</p>
             </div>
         </a>
 
         <!-- Libro 3 -->
-        <a href="https://drive.google.com/your-link-here-3" target="_blank" class="glass-card rounded-2xl p-3 flex flex-col group">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=300&q=80" alt="Automatización" class="book-cover mb-3">
+        <a href="#" target="_blank" class="glass-card rounded-2xl p-4 flex flex-col group">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80" alt="Automatización" class="book-cover mb-4">
             <div class="flex-grow">
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="category-badge">Scripts</span>
+                <div class="mb-3">
+                    <span class="category-badge">Python</span>
                 </div>
-                <h3 class="text-sm font-bold mb-1 group-hover:text-sky-400 transition-colors">Automatización</h3>
-                <p class="text-slate-500 text-[11px] leading-tight">Optimización de tareas con Python.</p>
+                <h3 class="text-lg font-bold mb-2 group-hover:text-sky-400 transition-colors leading-snug">Automatización de Tareas</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Crea scripts potentes para optimizar flujos de trabajo académico.</p>
             </div>
         </a>
 
         <!-- Libro 4 -->
-        <a href="https://drive.google.com/your-link-here-4" target="_blank" class="glass-card rounded-2xl p-3 flex flex-col group">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=300&q=80" alt="Algoritmos" class="book-cover mb-3">
+        <a href="#" target="_blank" class="glass-card rounded-2xl p-4 flex flex-col group">
+            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=500&q=80" alt="Lógica" class="book-cover mb-4">
             <div class="flex-grow">
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="category-badge">Avanzado</span>
+                <div class="mb-3">
+                    <span class="category-badge">Lógica</span>
                 </div>
-                <h3 class="text-sm font-bold mb-1 group-hover:text-sky-400 transition-colors">Algoritmos</h3>
-                <p class="text-slate-500 text-[11px] leading-tight">Estructuras y complejidad.</p>
-            </div>
-        </a>
-
-        <!-- Libro 5 -->
-        <a href="https://drive.google.com/your-link-here-5" target="_blank" class="glass-card rounded-2xl p-3 flex flex-col group">
-            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=300&q=80" alt="Web Dev" class="book-cover mb-3">
-            <div class="flex-grow">
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="category-badge">Web</span>
-                </div>
-                <h3 class="text-sm font-bold mb-1 group-hover:text-sky-400 transition-colors">Django/Flask</h3>
-                <p class="text-slate-500 text-[11px] leading-tight">Backend y APIs RESTful.</p>
-            </div>
-        </a>
-
-        <!-- Libro 6 (Ejemplo extra) -->
-        <a href="https://drive.google.com/your-link-here-6" target="_blank" class="glass-card rounded-2xl p-3 flex flex-col group">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=300&q=80" alt="IA" class="book-cover mb-3">
-            <div class="flex-grow">
-                <div class="flex flex-wrap gap-1 mb-2">
-                    <span class="category-badge">IA</span>
-                </div>
-                <h3 class="text-sm font-bold mb-1 group-hover:text-sky-400 transition-colors">Machine Learning</h3>
-                <p class="text-slate-500 text-[11px] leading-tight">Modelos y redes neuronales.</p>
+                <h3 class="text-lg font-bold mb-2 group-hover:text-sky-400 transition-colors leading-snug">Lógica de Programación</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Aprende a pensar como un desarrollador profesional desde cero.</p>
             </div>
         </a>
 
     </main>
 
-    <footer class="mt-16 text-center text-slate-600 text-[10px] uppercase tracking-widest border-t border-slate-800 pt-6">
-        <p>PyLib — Educación Tecnológica Universitaria</p>
+    <footer class="mt-24 text-center text-slate-500 text-xs uppercase tracking-[0.2em] border-t border-slate-800 pt-10">
+        <p>PyLib — Tu Puerta al Conocimiento Tecnológico</p>
     </footer>
 
     <script>
@@ -176,8 +148,9 @@
             
             cards.forEach(card => {
                 const title = card.querySelector('h3').innerText.toLowerCase();
-                const category = card.querySelector('.category-badge').innerText.toLowerCase();
-                if(title.includes(term) || category.includes(term)) {
+                const badge = card.querySelector('.category-badge').innerText.toLowerCase();
+                const desc = card.querySelector('p').innerText.toLowerCase();
+                if(title.includes(term) || badge.includes(term) || desc.includes(term)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
